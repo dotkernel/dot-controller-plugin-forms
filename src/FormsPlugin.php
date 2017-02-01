@@ -52,32 +52,36 @@ class FormsPlugin implements PluginInterface
     }
 
     /**
-     * @param string $formName
+     * @param string $name
      * @return object
      */
-    public function __invoke(string $formName = null): object
+    public function __invoke(string $name = null): object
     {
-        if (is_null($formName)) {
+        if (is_null($name)) {
             return $this;
         }
 
-        $form = null;
+        $result = null;
         // check the container first, in case there is a form to get through the abstract factory
-        $abstractFormName = FormAbstractServiceFactory::PREFIX . '.' . $formName;
+        $abstractFormName = FormAbstractServiceFactory::PREFIX . '.' . $name;
         if ($this->container->has($abstractFormName)) {
-            $form = $this->container->get($abstractFormName);
-        } elseif ($this->formElementManager->has($formName)) {
-            $form = $this->formElementManager->get($formName);
+            $result = $this->container->get($abstractFormName);
+        } elseif ($this->formElementManager->has($name)) {
+            $result = $this->formElementManager->get($name);
         }
 
-        if (!$form) {
+        if (!$result) {
             throw new RuntimeException(
-                "Form with name $formName could not be created. Are you sure you registered it in the form manager?"
+                "Form, fieldset or element with name $result could not be created. ' .
+                'Are you sure you registered it in the form manager?"
             );
         }
 
-        $this->restoreFormState($form);
-        return $form;
+        if ($result instanceof Form) {
+            $this->restoreFormState($result);
+        }
+
+        return $result;
     }
 
     /**
