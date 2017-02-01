@@ -7,9 +7,12 @@
  * Time: 2:37 PM
  */
 
+declare(strict_types = 1);
+
 namespace Dot\Controller\Plugin\Forms\Factory;
 
 use Dot\Controller\Plugin\Forms\FormsPlugin;
+use Dot\FlashMessenger\FlashMessengerInterface;
 use Interop\Container\ContainerInterface;
 
 /**
@@ -26,7 +29,8 @@ class FormsPluginFactory
     {
         return new FormsPlugin(
             $container->get('FormElementManager'),
-            $container
+            $container,
+            $container->get(FlashMessengerInterface::class)
         );
     }
 }

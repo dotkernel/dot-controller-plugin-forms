@@ -7,6 +7,8 @@
  * Time: 2:27 PM
  */
 
+declare(strict_types = 1);
+
 namespace Dot\Controller\Plugin\Forms;
 
 use Dot\Controller\Plugin\Forms\Factory\FormsPluginFactory;
