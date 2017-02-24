@@ -78,7 +78,7 @@ class FormsPlugin implements PluginInterface
         }
 
         if ($result instanceof Form) {
-            $this->restoreFormState($result);
+            $this->restoreState($result);
         }
 
         return $result;
@@ -87,7 +87,7 @@ class FormsPlugin implements PluginInterface
     /**
      * @param Form $form
      */
-    public function restoreFormState(Form $form)
+    public function restoreState(Form $form)
     {
         if ($this->flashMessenger) {
             $dataKey = $form->getName() . '_data';
@@ -104,7 +104,7 @@ class FormsPlugin implements PluginInterface
     /**
      * @param Form $form
      */
-    public function saveFormState(Form $form)
+    public function saveState(Form $form)
     {
         if ($this->flashMessenger) {
             $dataKey = $form->getName() . '_data';
@@ -119,7 +119,7 @@ class FormsPlugin implements PluginInterface
      * @param Form $form
      * @return array
      */
-    public function getFormMessages(Form $form): array
+    public function getMessages(Form $form): array
     {
         $formMessages = $form->getMessages();
         return $this->processFormMessages($formMessages);
@@ -153,7 +153,7 @@ class FormsPlugin implements PluginInterface
      * @param Form $form
      * @return array
      */
-    public function getFormErrors(Form $form): array
+    public function getErrors(Form $form): array
     {
         $formMessages = $form->getMessages();
         return $this->processFormErrors($formMessages);
