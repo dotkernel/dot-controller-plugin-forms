@@ -55,7 +55,7 @@ class FormsPlugin implements PluginInterface
      * @param string $name
      * @return object
      */
-    public function __invoke(string $name = null): object
+    public function __invoke(string $name = null)
     {
         if (is_null($name)) {
             return $this;
