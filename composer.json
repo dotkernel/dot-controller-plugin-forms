@@ -13,42 +13,14 @@
     "php": "^7.1",
     "container-interop/container-interop": "^1.1",
 
-    "dotkernel/dot-controller": "dev-develop as 0.6.x-dev",
-    "dotkernel/dot-event": "dev-develop as 0.6.x-dev",
-    "dotkernel/dot-flashmessenger": "dev-develop as 0.6.x-dev"
+    "dotkernel/dot-controller": "~0.1",
+    "dotkernel/dot-flashmessenger": "~0.1",
+    "dotkernel/dot-form": "^1.0"
   },
   "require-dev": {
     "phpunit/phpunit": "^4.8",
-    "squizlabs/php_codesniffer": "^2.3",
-
-    "dotkernel/dot-hydrator": "0.6.x-dev",
-    "dotkernel/dot-filter": "0.6.x-dev",
-    "dotkernel/dot-validator": "0.6.x-dev",
-    "dotkernel/dot-inputfilter": "0.6.x-dev",
-    "dotkernel/dot-form": "0.6.x-dev"
+    "squizlabs/php_codesniffer": "^2.3"
   },
-  "repositories": [
-    {
-      "type": "vcs",
-      "url": "https://github.com/dotkernel/dot-form"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/dotkernel/dot-inputfilter"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/dotkernel/dot-filter"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/dotkernel/dot-validator"
-    },
-    {
-      "type": "vcs",
-      "url": "https://github.com/dotkernel/dot-hydrator"
-    }
-  ],
   "autoload": {
     "psr-4": {
       "Dot\\Controller\\Plugin\\Forms\\": "src/"
@@ -61,7 +33,7 @@
   },
   "extra": {
     "branch-alias": {
-      "dev-master": "0.6-dev"
+      "dev-master": "0.2-dev"
     }
   }
 }
