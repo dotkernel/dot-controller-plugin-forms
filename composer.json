@@ -13,8 +13,8 @@
     "php": "^7.1",
     "container-interop/container-interop": "^1.1",
 
-    "dotkernel/dot-controller": "~0.1",
-    "dotkernel/dot-flashmessenger": "~0.1",
+    "dotkernel/dot-controller": "^0.1",
+    "dotkernel/dot-flashmessenger": "^0.1",
     "dotkernel/dot-form": "^1.0"
   },
   "require-dev": {
