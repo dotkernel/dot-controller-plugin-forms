@@ -11,7 +11,7 @@ namespace Dot\Controller\Plugin\Forms\Factory;
 
 use Dot\Controller\Plugin\Forms\FormsPlugin;
 use Dot\FlashMessenger\FlashMessengerInterface;
-use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 
 /**
  * Class FormsPluginFactory
