@@ -14,7 +14,7 @@ use Dot\Controller\Plugin\PluginInterface;
 use Dot\FlashMessenger\FlashMessengerInterface;
 use Dot\Form\Factory\FormAbstractServiceFactory;
 use Dot\Form\FormElementManager;
-use Interop\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 use Zend\Form\Form;
 use Zend\Form\FormInterface;
 
