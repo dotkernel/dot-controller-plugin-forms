@@ -15,8 +15,8 @@ use Dot\FlashMessenger\FlashMessengerInterface;
 use Dot\Form\Factory\FormAbstractServiceFactory;
 use Dot\Form\FormElementManager;
 use Psr\Container\ContainerInterface;
-use Zend\Form\Form;
-use Zend\Form\FormInterface;
+use Laminas\Form\Form;
+use Laminas\Form\FormInterface;
 
 /**
  * Class FormsPlugin
